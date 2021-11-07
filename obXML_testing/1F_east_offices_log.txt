@@ -1,0 +1,34 @@
+FMIL: module = FMILIB, log level = 5: Allocating FMIL context
+FMIL: module = FMILIB, log level = 5: Detecting FMI standard version
+FMIL: module = FMIZIP, log level = 5: Unpacking FMU into c:\temp\JModelica.org\jm_tmp_xdete
+FMIL: module = FMIXML, log level = 5: Parsing XML to detect FMI standard version
+FMIL: module = FMIXML, log level = 5: XML specifies FMI 1.0
+FMIL: module = FMILIB, log level = 4: XML specifies FMI standard version 1.0
+FMIL: module = FMILIB, log level = 5: Parsing model description XML
+FMIL: module = FMI1XML, log level = 5: Parsing XML element fmiModelDescription
+FMIL: module = FMI1XML, log level = 5: Parsing XML element ModelVariables
+FMIL: module = FMI1XML, log level = 5: Checking alias information
+FMIL: module = FMI1XML, log level = 5: Setting up direct dependencies cross-references
+FMIL: module = FMI1XML, log level = 4: Processing implementation element (co-simulation FMU detected)
+FMIL: module = FMILIB, log level = 5: Parsing finished successfully
+FMIL: module = FMILIB, log level = 4: Loading 'win32' binary with 'standard32' platform types
+FMIL: module = FMICAPI, log level = 5: Loaded FMU binary from c:\temp\JModelica.org\jm_tmp_xdete\binaries\win32\obFMU.dll
+FMIL: module = FMICAPI, log level = 5: Loading functions for the co-simulation interface
+FMIL: module = FMILIB, log level = 5: Successfully loaded all the interface functions
+FMIL: module = FMILIB, log level = 5: Instantiating the slave with 
+	FMU location ='file:///c:/temp/JModelica.org/jm_tmp_xdete'
+	MIME type = 'application/x-fmu-sharedlibrary'
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK] fmiInstantiateSlave start for instance name: obm_1F_east_offices
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]     instanceName: obm_1F_east_offices
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]     GUID: {7b2d6d3f-ac4d-4aa8-93eb-d53357dc58ec}
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]     fmuLocation: file:///c:/temp/JModelica.org/jm_tmp_xdete
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]     mimeType: application/x-fmu-sharedlibrary
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]   Perform checks
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK]   Allocate memory
+FMIL: module = obm_1F_east_offices, log level = 4: [Information][FMU status:OK] Currnet working directory: C:\Users\marc.EQUA\Documents
+FMIL: module = obm_1F_east_offices, log level = 4: [information][FMU status:OK] Find and use the obXML.xml in the working directory.
+FMIL: module = obm_1F_east_offices, log level = 2: [error][FMU status:Error] Fail to load obXML.xml file from C:\Users\marc.EQUA\Documents/obXML.xml. Error: lÓþ
+FMIL: module = FMILIB, log level = 5: Releasing FMU CAPI interface
+FMIL: module = FMICAPI, log level = 5: Successfully unloaded FMU binary
+FMIL: module = FMILIB, log level = 5: Releasing allocated library resources
+FMIL: module = JMPRT, log level = 5: Removing c:\temp\JModelica.org\jm_tmp_xdete

@@ -1,0 +1,1836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+An obXML case study based on 12 zones and 16 occupants
+
+Version History:
+	2016-07-28: Update to obXML version 1.2.1 for Occupancy Simulator paper
+		- Update the space ID to match the layout diagram
+		- Update the occupant ID to be readable
+	2016-09-07: Update to obXML version 1.3.2 for new obFMU
+		- Update the meeting event element
+		- Update the movement behavior element
+
+TODO: Update the behaviors to use more real behaviors
+ -->
+<OccupantBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="obXML" Version="1.3.2" xsi:noNamespaceSchemaLocation="obXML_v1.3.2.xsd">
+	
+	<Buildings>
+		<Building ID="Building_1">
+			<Description>A office building which contains 12 space and 16 staffs.</Description>
+			<Type>Office</Type>
+			<Address>Miami, FL, USA</Address>
+			<Spaces ID="Spaces_1">
+				<Space ID="S0_Outdoor">
+					<Description>Outdoor space</Description>
+					<Type>Outdoor</Type>
+				</Space>
+				<Space ID="S1_Restroom">
+					<Type>Other</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type>	</HVAC>
+						<Light>	<Type>OnOff</Type>	</Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+				</Space>
+				<Space ID="S2_Researcher_Office">
+					<Description>Shared Office for 4 Researchers</Description>
+					<Type>OfficeShared</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type>	</HVAC>
+						<Light>	<Type>OnOff</Type>	</Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O8_Researcher_1</OccupantID>
+					<OccupantID>O9_Researcher_2</OccupantID>
+					<OccupantID>O10_Researcher_3</OccupantID>
+					<OccupantID>O11_Researcher_4</OccupantID>
+				</Space>
+				<Space ID="S3_Director_Office">
+					<Description>Private office for the director</Description>
+					<Type>OfficePrivate</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O1_Director</OccupantID>
+				</Space>
+				<Space ID="S4_Sec_Office">
+					<Description>Private office for director's secretary</Description>
+					<Type>OfficePrivate</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O2_Secretary</OccupantID>
+				</Space>
+				<Space ID="S5_Meeting_Room">
+					<Type>MeetingRoom</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<MeetingEvent>
+						<SeasonType>All</SeasonType>
+						<DayofWeek>Monday</DayofWeek>
+						<DayofWeek>Friday</DayofWeek>
+						<MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+						<MaxNumOccupantsPerMeeting>8</MaxNumOccupantsPerMeeting>
+						
+						<MinNumberOfMeetingsPerDay>2</MinNumberOfMeetingsPerDay>
+						<MaxNumberOfMeetingsPerDay>5</MaxNumberOfMeetingsPerDay>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT30M</MeetingDuration>
+							<Probability>0.12</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT60M</MeetingDuration>
+							<Probability>0.72</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT90M</MeetingDuration>
+							<Probability>0.12</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT120M</MeetingDuration>
+							<Probability>0.04</Probability>
+						</MeetingDurationProbability>
+					</MeetingEvent>
+					<MeetingEvent>
+						<SeasonType>All</SeasonType>
+						<DayofWeek>Tuesday</DayofWeek>
+						<DayofWeek>Wednesday</DayofWeek>
+						<DayofWeek>Thursday</DayofWeek>
+						<MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+						<MaxNumOccupantsPerMeeting>8</MaxNumOccupantsPerMeeting>
+						
+						<MinNumberOfMeetingsPerDay>3</MinNumberOfMeetingsPerDay>
+						<MaxNumberOfMeetingsPerDay>7</MaxNumberOfMeetingsPerDay>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT30M</MeetingDuration>
+							<Probability>0.12</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT60M</MeetingDuration>
+							<Probability>0.72</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT90M</MeetingDuration>
+							<Probability>0.12</Probability>
+						</MeetingDurationProbability>
+						<MeetingDurationProbability>
+							<MeetingDuration>PT120M</MeetingDuration>
+							<Probability>0.04</Probability>
+						</MeetingDurationProbability>
+					</MeetingEvent>
+				</Space>
+				<Space ID="S6_Corridor">
+					<Type>Corridor</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+				</Space>
+				<Space ID="S7_Kitchen">
+					<Type>Other</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type>	</HVAC>
+						<Light>	<Type>OnOff</Type>	</Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+				</Space>
+				<Space ID="S8_Senior_Research_Office_1">
+					<Type>OfficeShared</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O3_Senior_Researcher_1</OccupantID>
+					<OccupantID>O4_Senior_Researcher_2</OccupantID>
+					<OccupantID>O5_Senior_Researcher_3</OccupantID>
+				</Space>				
+				<Space ID="S9_Senior_Research_Office_2">
+					<Type>OfficeShared</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O12_Senior_Researcher_4</OccupantID>
+					<OccupantID>O13_Senior_Researcher_5</OccupantID>
+					<OccupantID>O14_Senior_Researcher_6</OccupantID>
+				</Space>
+				<Space ID="S10_Manager_Office_1">
+					<Type>OfficePrivate</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O6_Manager_1</OccupantID>
+				</Space>
+				<Space ID="S11_Manager_Office_2">
+					<Type>OfficePrivate</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O7_Manager_2</OccupantID>
+				</Space>
+				<Space ID="S12_Admin_Office">
+					<Type>OfficeShared</Type>
+					<Systems>
+						<HVAC><Type>ZoneOnOff</Type></HVAC>
+						<Light>	<Type>OnOff</Type></Light>
+						<Window><Type>Operable</Type></Window>
+						<PlugLoad><Type>ContinuousControl</Type></PlugLoad>
+						<Thermostat><Type>Adjustable</Type></Thermostat>
+						<ShadeAndBlind><Type>Operable</Type></ShadeAndBlind>
+					</Systems>
+					<OccupantID>O15_Admin_1</OccupantID>
+					<OccupantID>O16_Admin_2</OccupantID>
+				</Space>
+			</Spaces>
+		</Building>
+	</Buildings>
+	<Occupants>
+		<Occupant ID="O1_Director" Name="Director">
+			<Priority>3</Priority>
+			<Age>56</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Manager</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O2_Secretary" Name="Secretary">
+			<Age>40</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Admin</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O3_Senior_Researcher_1" Name="Senior Researcher 1">
+			<Age>35</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O4_Senior_Researcher_2" Name="Senior Researcher 2">
+			<Age>40</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O5_Senior_Researcher_3" Name="Senior Researcher 3">
+			<Age>32</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O6_Manager_1"  Name="Manager 1">
+			<Priority>2</Priority>
+			<Age>45</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Manager</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O7_Manager_2"  Name="Manager 2">
+			<Priority>2</Priority>
+			<Age>48</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Manager</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O8_Researcher_1"  Name="Researcher 1">
+			<Age>21</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O9_Researcher_2"  Name="Researcher 2">
+			<Age>22</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<JobType>Researcher</JobType>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O10_Researcher_3"  Name="Researcher 3">
+			<Age>22</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<JobType>Researcher</JobType>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O11_Researcher_4"  Name="Researcher 4">
+			<Age>21</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O12_Senior_Researcher_4"  Name="Senior Researcher 4">
+			<Age>34</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O13_Senior_Researcher_5"  Name="Senior Researcher 5">
+			<Age>35</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O14_Senior_Researcher_6"  Name="Senior Researcher 6">
+			<Age>36</Age>
+			<Gender>Male</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<MovementBehaviorID>B_M_Researcher</MovementBehaviorID>
+			
+			<BehaviorID>B_L4</BehaviorID>
+			<BehaviorID>B_L5</BehaviorID>
+			<BehaviorID>B_L6</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			<BehaviorID>B_PL2</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			<BehaviorID>B_AC5</BehaviorID>
+			<BehaviorID>B_AC6</BehaviorID>
+			<BehaviorID>B_AC7</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			
+		</Occupant>
+		<Occupant ID="O15_Admin_1"  Name="Admin 1">
+			<Age>24</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<JobType>Administrator</JobType>
+			<MovementBehaviorID>B_M_Admin</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+		<Occupant ID="O16_Admin_2"  Name="Admin 2">
+			<Age>25</Age>
+			<Gender>Female</Gender>
+			<LifeStyle>Norm</LifeStyle>
+			<JobType>Administrator</JobType>
+			<MovementBehaviorID>B_M_Admin</MovementBehaviorID>			
+			
+			<BehaviorID>B_L1</BehaviorID>
+			<BehaviorID>B_L2</BehaviorID>
+			<BehaviorID>B_L3</BehaviorID>
+			
+			<BehaviorID>B_PL1</BehaviorID>
+			
+			<BehaviorID>B_Therm1</BehaviorID>
+			<BehaviorID>B_Therm2</BehaviorID>
+			<BehaviorID>B_Therm3</BehaviorID>
+			
+			
+			<BehaviorID>B_AC1</BehaviorID>
+			<BehaviorID>B_AC2</BehaviorID>
+			<BehaviorID>B_AC3</BehaviorID>
+			<BehaviorID>B_AC4</BehaviorID>
+			
+			<BehaviorID>B_W1</BehaviorID>
+			<BehaviorID>B_W2</BehaviorID>
+			<BehaviorID>B_W3_Rain_close</BehaviorID>
+		</Occupant>
+	</Occupants>
+	
+	<Behaviors>
+			<MovementBehavior ID="B_M_Researcher">
+			<Description>Researcher and senior 70% own office and 5% other office</Description>
+			<SeasonType>All</SeasonType>
+			<DayofWeek>Weekdays</DayofWeek>
+			
+			<RandomMovementEvent>
+				<SpaceOccupancy>
+					<SpaceCategory>OwnOffice</SpaceCategory>
+					<PercentTimePresence>70</PercentTimePresence>
+					<Duration>PT90M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>OtherOffice</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT30M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>MeetingRoom</SpaceCategory>
+					<PercentTimePresence>15</PercentTimePresence>
+					<Duration>PT20M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>AuxRoom</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT10M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>Outdoor</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT10M</Duration>
+				</SpaceOccupancy>
+				
+			</RandomMovementEvent>
+			<StatusTransitionEvent>
+				<EventType>Arrival</EventType>
+				<EventOccurModel>
+					<CustomProbabilityModel>
+						<StatusTransitionProbability> 
+							<Time>08:00:00</Time>
+							<Probability>0.0</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>08:30:00</Time>
+							<Probability>0.3</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>08:45:00</Time>
+							<Probability>0.60</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:00:00</Time>
+							<Probability>0.70</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:30:00</Time>
+							<Probability>1.0</Probability>
+						</StatusTransitionProbability> 					
+					</CustomProbabilityModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>Departure</EventType>
+				<EventOccurModel>
+					<NormalProbabilityModel> 
+						<EarlyOccurTime>17:30:00</EarlyOccurTime>
+						<TypicalOccurTime>18:00:00</TypicalOccurTime>					
+					</NormalProbabilityModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>ShortTermLeaving</EventType>
+				<EventOccurModel>
+					<NormalProbabilityModel> 
+						<EarlyOccurTime>11:00:00</EarlyOccurTime>
+						<TypicalOccurTime>12:00:00</TypicalOccurTime>
+					</NormalProbabilityModel> 
+				</EventOccurModel>
+				<EventDuration> 
+					<NormalDurationModel>
+						<TypicalDuration>PT60M</TypicalDuration>
+						<MinimumDuration>PT30M</MinimumDuration>
+					</NormalDurationModel>
+				</EventDuration> 	
+			</StatusTransitionEvent>
+		</MovementBehavior>
+
+		<MovementBehavior ID="B_M_Manager">
+			<Description>Manager 55% own office and 5% other office</Description>
+			<SeasonType>All</SeasonType>
+			<DayofWeek>Weekdays</DayofWeek>
+			
+			<RandomMovementEvent>
+				<SpaceOccupancy>
+					<SpaceCategory>OwnOffice</SpaceCategory>
+					<PercentTimePresence>55</PercentTimePresence>
+					<Duration>PT90M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>OtherOffice</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT30M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>MeetingRoom</SpaceCategory>
+					<PercentTimePresence>30</PercentTimePresence>
+					<Duration>PT20M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>AuxRoom</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT10M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>Outdoor</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT10M</Duration>
+				</SpaceOccupancy>
+				
+			</RandomMovementEvent>
+			<StatusTransitionEvent>
+				<EventType>Arrival</EventType>
+				<EventOccurModel>
+					<CustomProbabilityModel>
+						<StatusTransitionProbability> 
+							<Time>08:00:00</Time>
+							<Probability>0.0</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>08:30:00</Time>
+							<Probability>0.2</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:00:00</Time>
+							<Probability>0.8</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:30:00</Time>
+							<Probability>1.0</Probability>
+						</StatusTransitionProbability> 					
+					</CustomProbabilityModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>Departure</EventType>
+				<EventOccurModel>
+					<MarkovChainModel> 
+						<EarlyOccurTime>17:30:00</EarlyOccurTime>
+						<TypicalOccurTime>18:00:00</TypicalOccurTime>					
+					</MarkovChainModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>ShortTermLeaving</EventType>
+				<EventOccurModel>
+					<NormalProbabilityModel> 
+						<EarlyOccurTime>11:00:00</EarlyOccurTime>
+						<TypicalOccurTime>12:00:00</TypicalOccurTime>
+					</NormalProbabilityModel> 
+				</EventOccurModel>
+				<EventDuration> 
+					<NormalDurationModel>
+						<TypicalDuration>PT60M</TypicalDuration>
+						<MinimumDuration>PT30M</MinimumDuration>
+					</NormalDurationModel>
+				</EventDuration> 	
+			</StatusTransitionEvent>	
+		</MovementBehavior>
+		
+		<MovementBehavior ID="B_M_Admin">
+			<Description>Sec and Admin 50% own office, 20% other office</Description>
+			<SeasonType>All</SeasonType>
+			<DayofWeek>Weekdays</DayofWeek>
+			
+			<RandomMovementEvent>
+				<SpaceOccupancy>
+					<SpaceCategory>OwnOffice</SpaceCategory>
+					<PercentTimePresence>50</PercentTimePresence>
+					<Duration>PT90M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>OtherOffice</SpaceCategory>
+					<PercentTimePresence>20</PercentTimePresence>
+					<Duration>PT30M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>MeetingRoom</SpaceCategory>
+					<PercentTimePresence>20</PercentTimePresence>
+					<Duration>PT20M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>AuxRoom</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT20M</Duration>
+				</SpaceOccupancy>
+				<SpaceOccupancy>
+					<SpaceCategory>Outdoor</SpaceCategory>
+					<PercentTimePresence>5</PercentTimePresence>
+					<Duration>PT10M</Duration>
+				</SpaceOccupancy>
+				
+			</RandomMovementEvent>
+			<StatusTransitionEvent>
+				<EventType>Arrival</EventType>
+				<EventOccurModel>
+					<CustomProbabilityModel>
+						<StatusTransitionProbability> 
+							<Time>08:00:00</Time>
+							<Probability>0.0</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>08:30:00</Time>
+							<Probability>0.2</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:00:00</Time>
+							<Probability>0.8</Probability>
+						</StatusTransitionProbability>
+						<StatusTransitionProbability> 
+							<Time>09:30:00</Time>
+							<Probability>1.0</Probability>
+						</StatusTransitionProbability> 					
+					</CustomProbabilityModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>Departure</EventType>
+				<EventOccurModel>
+					<MarkovChainModel> 
+						<EarlyOccurTime>17:30:00</EarlyOccurTime>
+						<TypicalOccurTime>18:00:00</TypicalOccurTime>					
+					</MarkovChainModel> 
+				</EventOccurModel>
+			</StatusTransitionEvent>
+			<StatusTransitionEvent>
+				<EventType>ShortTermLeaving</EventType>
+				<EventOccurModel>
+					<NormalProbabilityModel> 
+						<EarlyOccurTime>11:00:00</EarlyOccurTime>
+						<TypicalOccurTime>12:00:00</TypicalOccurTime>
+					</NormalProbabilityModel> 
+				</EventOccurModel>
+				<EventDuration> 
+					<NormalDurationModel>
+						<TypicalDuration>PT60M</TypicalDuration>
+						<MinimumDuration>PT30M</MinimumDuration>
+					</NormalDurationModel>
+				</EventDuration> 	
+			</StatusTransitionEvent>	
+		</MovementBehavior>
+
+		
+		<Behavior ID="B_Light_Hunt_1980_Logit_1D_Quadratic">
+			<Description>Dark Light based on the model in Hunt, D. R. G. Predicting artificial lighting use - a method based upon observed patterns of behaviour. Light. Res. Technol. (1980).</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P1" Name="Room work plane daylight illuminance">
+						<Type>RoomWorkPlaneDaylightIlluminance</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Visual>
+						<ParameterRange>
+							<ParameterID>P1</ParameterID>
+							<Min>658</Min>
+						</ParameterRange>
+					</Visual>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Logit1DQuadratic>
+							<Description>p = A + C / {1 + exp(-B*[log(P1)-D]}</Description>
+							<CoefficientA>-0.0175</CoefficientA>
+							<CoefficientB>-4.0835</CoefficientB>
+							<CoefficientC>1.0361</CoefficientC>
+							<CoefficientD>1.8223</CoefficientD>
+							<Parameter1ID>P1</Parameter1ID>
+						</Logit1DQuadratic>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+	
+		<Behavior ID="B_Window_Yun_et_al_2008_logit_2D_Tin_Tout">
+			<Description>Windows open based on Yun, GY. and Steemers, K. Time-dependent occupant behaviour models of window control in summer. Build. Environ. 43, 1471–1482 (2008). </Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>Summer</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P_Window_Yun_2008_Tin" Name="Room air temperature">
+						<Type>RoomAirTemperature</Type>
+					</Parameter>
+					<Parameter ID="P_Window_Yun_2008_Tout" Name="Outdoor air temperature">
+						<Type>OutdoorDryBulbTemperature</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Logit2D>
+							<Description>log(p/(1-p)) = A*P1+B*P2+C or p = exp(A*P1+B*P2+C) / { exp(A*P1+B*P2+C) + 1}</Description>
+							<CoefficientA>0.220</CoefficientA>
+							<CoefficientB>-0.003</CoefficientB>
+							<CoefficientC>-4.842</CoefficientC>
+							<Parameter1ID>P_Window_Yun_2008_Tin</Parameter1ID>
+							<Parameter2ID>P_Window_Yun_2008_Tout</Parameter2ID>
+						</Logit2D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Windows>
+					<WindowType>Operable</WindowType>
+				</Windows>
+			</Systems>
+		</Behavior>
+	
+		<Behavior ID="B_L1">
+			<Description>Enter Light On 95%</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>EnteringRoom</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+					  <ConstantValue>
+							<Description>Constant probability</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>		
+		
+		<Behavior ID="B_L2">
+			<Description>Dark Light On less 350 lux</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P_B_L2_1" Name="Room work plane daylight illuminance">
+						<Type>RoomWorkPlaneDaylightIlluminance</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Visual>
+						<ParameterRange>
+							<ParameterID>P_B_L2_1</ParameterID>
+							<Min>500</Min>
+						</ParameterRange>
+					</Visual>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>500</CoefficientA>
+							<CoefficientB>-150</CoefficientB>
+							<CoefficientC>3</CoefficientC>
+							<Parameter1ID>P_B_L2_1</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+		
+		<Behavior ID="B_L3">
+			<Description>Leaving more than 6 hours Light Off</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan6Hours</EventType>
+				<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>constant probability</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_L4">
+			<Description>Dark Light On less 250 lux</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P2" Name="Room work plane daylight illuminance">
+						<Type>RoomWorkPlaneDaylightIlluminance</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Visual>
+						<ParameterRange>
+							<ParameterID>P2</ParameterID>
+							<Min>400</Min>
+						</ParameterRange>
+					</Visual>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>400</CoefficientA>
+							<CoefficientB>-150</CoefficientB>
+							<CoefficientC>3</CoefficientC>
+							<Parameter1ID>P2</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_L5">
+			<Description>Leaving Light Off</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoom</EventType>
+				<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>constant probability</Description>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_L6">
+			<Description>Bright Light Off when higher than 300 lux</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P3" Name="Room work plane daylight illuminance">
+						<Type>RoomWorkPlaneDaylightIlluminance</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>300</CoefficientA>
+							<CoefficientB>150</CoefficientB>
+							<CoefficientC>2.5</CoefficientC>
+							<Parameter1ID>P3</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Lights>
+					<LightType>OnOff</LightType>
+				</Lights>
+			</Systems>
+		</Behavior>
+		
+		<Behavior ID="B_PL1">
+			<Description>Plug equipment when arrive</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>EnteringRoom</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>SetToControlValue</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>1.00</CoefficientA>
+						</ConstantValue>
+					</Formula>
+					<ControlValue>1.0</ControlValue>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<PlugLoad>
+					<PlugLoadType>ContinuousControl</PlugLoadType>
+				</PlugLoad>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_PL2">
+			<Description>Unplug equipment when left</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan6Hours</EventType>
+				<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>SetToControlValue</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+					<ControlValue>0.3</ControlValue>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<PlugLoad>
+					<PlugLoadType>ContinuousControl</PlugLoadType>
+				</PlugLoad>
+			</Systems>
+		</Behavior>
+		
+		<Behavior ID="B_Therm1">
+			<Description>Winter set to 21.11 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>Winter</SeasonType>
+				</Time>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>SetToControlValue</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+					<ControlValue>21.11</ControlValue>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Thermostats>
+					<ThermostatType>Adjustable</ThermostatType>
+				</Thermostats>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_Therm2">
+			<Description>Spring and Fall set to 22.5 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>Spring</SeasonType>
+					<SeasonType>Fall</SeasonType>
+				</Time>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>SetToControlValue</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+					<ControlValue>22.5</ControlValue>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Thermostats>
+					<ThermostatType>Adjustable</ThermostatType>
+				</Thermostats>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_Therm3">
+			<Description>Summer set to 23.89 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>Summer</SeasonType>
+				</Time>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>SetToControlValue</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+					<ControlValue>23.89</ControlValue>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Thermostats>
+					<ThermostatType>Adjustable</ThermostatType>
+				</Thermostats>
+			</Systems>
+		</Behavior>	
+		
+		<Behavior ID="B_AC1">
+			<Description>Enter AC On</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>EnteringRoom</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<ConstantValue>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_AC2">
+			<Description>Hot AC On 27 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P4" Name="Room dry-bulb air temperature">
+						<Type>RoomAirTemperature</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Thermal>
+						<OtherComfortEnvelope>
+							<ParameterRange>
+								<ParameterID>P4</ParameterID>
+								<Min>21</Min>
+								<Max>24</Max>
+							</ParameterRange>
+						</OtherComfortEnvelope>
+					</Thermal>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>24</CoefficientA>
+							<CoefficientB>3</CoefficientB>
+							<CoefficientC>8</CoefficientC>
+							<Parameter1ID>P4</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_AC3">
+			<Description>Cold AC On 18 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P5" Name="Room dry-bulb air temperature">
+						<Type>RoomAirTemperature</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Thermal>
+						<OtherComfortEnvelope>
+							<ParameterRange>
+								<ParameterID>P5</ParameterID>
+								<Min>21</Min>
+								<Max>24</Max>
+							</ParameterRange>
+						</OtherComfortEnvelope>
+					</Thermal>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>21</CoefficientA>
+							<CoefficientB>-3</CoefficientB>
+							<CoefficientC>8</CoefficientC>
+							<Parameter1ID>P5</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>	
+		<Behavior ID="B_AC4">
+			<Description>Leave more than 6 hours AC Off</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan6Hours</EventType>
+				<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>Constant Probability</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_AC5">
+			<Description>Hot AC On 29 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P6" Name="Room dry-bulb air temperature">
+						<Type>RoomAirTemperature</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Thermal>
+						<OtherComfortEnvelope>
+							<ParameterRange>
+								<ParameterID>P6</ParameterID>
+								<Min>20</Min>
+								<Max>25</Max>
+							</ParameterRange>
+						</OtherComfortEnvelope>
+					</Thermal>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>25</CoefficientA>
+							<CoefficientB>4</CoefficientB>
+							<CoefficientC>8</CoefficientC>
+							<Parameter1ID>P6</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>	
+		<Behavior ID="B_AC6">
+			<Description>Cold AC On 16 deg.C</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P7" Name="Room dry-bulb air temperature">
+						<Type>RoomAirTemperature</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<Thermal>
+						<OtherComfortEnvelope>
+							<ParameterRange>
+								<ParameterID>P7</ParameterID>
+								<Min>20</Min>
+								<Max>25</Max>
+							</ParameterRange>
+						</OtherComfortEnvelope>
+					</Thermal>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>20</CoefficientA>
+							<CoefficientB>-4</CoefficientB>
+							<CoefficientC>8</CoefficientC>
+							<Parameter1ID>P7</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>	
+		<Behavior ID="B_AC7">
+			<Description>Leave more than 1 hours AC Off</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan1Hour</EventType>
+				<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>Constant Probability</Description>
+							<CoefficientA>0.98</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<HVAC>
+					<HVACType>ZoneOnOff</HVACType>
+				</HVAC>
+			</Systems>
+		</Behavior>
+					
+		<Behavior ID="B_W1">
+			<Description>StuffyWinOpen</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P8" Name="Room CO2 Concentration">
+						<Type>RoomCO2Concentration</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Needs>
+				<Physical>
+					<IAQ>
+						<ParameterRange>
+							<ParameterID>P8</ParameterID>
+							<Max>600</Max>
+						</ParameterRange>
+					</IAQ>
+				</Physical>
+			</Needs>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+						<Weibull1D>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>500</CoefficientA>
+							<CoefficientB>200</CoefficientB>
+							<CoefficientC>3</CoefficientC>
+							<Parameter1ID>P8</Parameter1ID>
+						</Weibull1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Windows>
+					<WindowType>Operable</WindowType>
+				</Windows>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_W3_Rain_close">
+			<Description>Close Window when raining</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<Environment>
+					<Parameter ID="P_W3_Rain_close_1" Name="Outdoor Rain Indicator">
+						<Type>OutdoorRainIndicator</Type>
+					</Parameter>
+				</Environment>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<Linear1D>
+							<Description>p=A*P1+B</Description>
+							<CoefficientA>0.95</CoefficientA>
+							<CoefficientB>0.0</CoefficientB>
+							<Parameter1ID>P_W3_Rain_close_1</Parameter1ID>
+						</Linear1D>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Windows>
+					<WindowType>Operable</WindowType>
+				</Windows>
+			</Systems>
+		</Behavior>
+		<Behavior ID="B_W2">
+			<Description>Leave Window Close</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan6Hours</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>S Shaped Curve Probability Function</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<Windows>
+					<WindowType>Operable</WindowType>
+				</Windows>
+			</Systems>
+		</Behavior>
+		
+		<Behavior ID="B_Blind_1">
+			<Description>Enter Blind Open 95%</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>EnteringRoom</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOn</Type>
+					<Formula>
+					  <ConstantValue>
+							<Description>Constant probability</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<ShadesAndBlinds>
+					<ShadeAndBlindType>Operable</ShadeAndBlindType>
+				</ShadesAndBlinds>
+			</Systems>
+		</Behavior>		
+		<Behavior ID="B_Blind_2">
+			<Description>Leave Blind Close</Description>
+			<Drivers>
+				<Time>
+					<TimeofDay>Day</TimeofDay>
+					<TimeofDay>Evening</TimeofDay>
+					<DayofWeek>Weekdays</DayofWeek>
+					<SeasonType>All</SeasonType>
+				</Time>
+				<EventType>LeavingRoomMoreThan6Hours</EventType>
+			</Drivers>
+			<Actions>
+				<Interaction>
+					<Type>TurnOff</Type>
+					<Formula>
+						<ConstantValue>
+							<Description>p=A</Description>
+							<CoefficientA>0.95</CoefficientA>
+						</ConstantValue>
+					</Formula>
+				</Interaction>
+			</Actions>
+			<Systems>
+				<ShadesAndBlinds>
+					<ShadeAndBlindType>Operable</ShadeAndBlindType>
+				</ShadesAndBlinds>
+			</Systems>
+		</Behavior>			
+		
+	</Behaviors>
+	<Seasons>
+		<Season Type="All">
+			<StartMonth>1</StartMonth>
+			<StartDay>1</StartDay>
+			<EndMonth>12</EndMonth>
+			<EndDay>31</EndDay>
+		</Season>
+		<Season Type="Spring">
+			<StartMonth>2</StartMonth>
+			<StartDay>1</StartDay>
+			<EndMonth>4</EndMonth>
+			<EndDay>30</EndDay>
+		</Season>
+		<Season Type="Summer">
+			<StartMonth>5</StartMonth>
+			<StartDay>1</StartDay>
+			<EndMonth>7</EndMonth>
+			<EndDay>31</EndDay>
+		</Season>
+		<Season Type="Fall">
+			<StartMonth>8</StartMonth>
+			<StartDay>1</StartDay>
+			<EndMonth>10</EndMonth>
+			<EndDay>31</EndDay>
+		</Season>
+		<Season Type="Winter">
+			<StartMonth>11</StartMonth>
+			<StartDay>1</StartDay>
+			<EndMonth>1</EndMonth>
+			<EndDay>31</EndDay>
+		</Season>
+	</Seasons>
+	<Holidays>
+		<Holiday Name="New Year's Day"><Date>2015-01-01</Date></Holiday>
+		<Holiday Name="Martin Luther King, Jr. Day"><Date>2015-01-19</Date></Holiday>
+		<Holiday Name="George Washington’s Birthday"><Date>2015-02-16</Date></Holiday>
+		<Holiday Name="Memorial Day"><Date>2015-05-25</Date></Holiday>
+		<Holiday Name="Independence Day"><Date>2015-07-03</Date></Holiday>
+		<Holiday Name="Labor Day"><Date>2015-09-07</Date></Holiday>
+		<Holiday Name="Columbus Day"><Date>2015-10-02</Date></Holiday>
+		<Holiday Name="Veterans Day"><Date>2015-11-11</Date></Holiday>
+		<Holiday Name="Thanksgiving Day"><Date>2015-11-26</Date></Holiday>
+		<Holiday Name="Christmas Day"><Date>2015-12-25</Date></Holiday>
+	</Holidays>
+</OccupantBehavior>

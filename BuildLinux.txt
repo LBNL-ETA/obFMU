@@ -1,0 +1,23 @@
+
+
+Build Linux:
+- move to the obFMU folder
+Make the obFMU:
+ $ make all
+clean the resource:
+ $ make clean
+
+
+Build nlopt linux
+ - cd to obfmu/obFMU/nlopt/
+ - $ chmod +x ./configure
+ - $ sudo apt-get install vim
+ - $ vim configure
+ use vim command
+ :set ff=unix  # change the file format to unix
+ :wq  # save and quit
+
+$ ./configure
+$ 
+
+$ ./configure --prefix=/vagrant/obfmu/install

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fmi2Functions.h" />
+    <ClInclude Include="fmi2FunctionTypes.h" />
+    <ClInclude Include="fmi2TypesPlatform.h" />
+    <ClInclude Include="fmiFunctions.h" />
+    <ClInclude Include="fmiPlatformTypes.h" />
+    <ClInclude Include="ObCustomProbabilityModel.h" />
+    <ClInclude Include="ObDurationModel.h" />
+    <ClInclude Include="ObEventOccurModel.h" />
+    <ClInclude Include="ObEventOccurModelFactory.h" />
+    <ClInclude Include="ObFmu.h" />
+    <ClInclude Include="ObMarkovChainModel.h" />
+    <ClInclude Include="ObMoveMatrixModel.h" />
+    <ClInclude Include="ObMoveMatrixObject.h" />
+    <ClInclude Include="nlopt\api\f77funcs.h" />
+    <ClInclude Include="nlopt\api\f77funcs_.h" />
+    <ClInclude Include="nlopt\api\nlopt-in.hpp" />
+    <ClInclude Include="nlopt\api\nlopt-internal.h" />
+    <ClInclude Include="nlopt\api\nlopt.h" />
+    <ClInclude Include="nlopt\api\nlopt.hpp" />
+    <ClInclude Include="nlopt\auglag\auglag.h" />
+    <ClInclude Include="nlopt\bobyqa\bobyqa.h" />
+    <ClInclude Include="nlopt\build\config.h" />
+    <ClInclude Include="nlopt\cdirect\cdirect.h" />
+    <ClInclude Include="nlopt\cobyla\cobyla.h" />
+    <ClInclude Include="nlopt\crs\crs.h" />
+    <ClInclude Include="nlopt\direct\direct-internal.h" />
+    <ClInclude Include="nlopt\direct\direct.h" />
+    <ClInclude Include="nlopt\esch\esch.h" />
+    <ClInclude Include="nlopt\isres\isres.h" />
+    <ClInclude Include="nlopt\mlsl\mlsl.h" />
+    <ClInclude Include="nlopt\mma\mma.h" />
+    <ClInclude Include="nlopt\neldermead\neldermead.h" />
+    <ClInclude Include="nlopt\newuoa\newuoa.h" />
+    <ClInclude Include="nlopt\praxis\praxis.h" />
+    <ClInclude Include="nlopt\slsqp\slsqp.h" />
+    <ClInclude Include="nlopt\stogo\global.h" />
+    <ClInclude Include="nlopt\stogo\linalg.h" />
+    <ClInclude Include="nlopt\stogo\local.h" />
+    <ClInclude Include="nlopt\stogo\stogo.h" />
+    <ClInclude Include="nlopt\stogo\stogo_config.h" />
+    <ClInclude Include="nlopt\stogo\tools.h" />
+    <ClInclude Include="nlopt\util\nlopt-util.h" />
+    <ClInclude Include="nlopt\util\redblack.h" />
+    <ClInclude Include="nlopt\util\soboldata.h" />
+    <ClInclude Include="ObBehavior.h" />
+    <ClInclude Include="ObBuilding.h" />
+    <ClInclude Include="ObDayofWeek.h" />
+    <ClInclude Include="ObNormalDurationModel.h" />
+    <ClInclude Include="ObNormalProbabilityModel.h" />
+    <ClInclude Include="ObStatusTransitionEvent.h" />
+    <ClInclude Include="ObMeetingEvent.h" />
+    <ClInclude Include="ObMovementBehavior.h" />
+    <ClInclude Include="ObRandomMovementEvent.h" />
+    <ClInclude Include="ObObject.h" />
+    <ClInclude Include="ObOccupant.h" />
+    <ClInclude Include="ObOccupantBehavior.h" />
+    <ClInclude Include="ObParameter.h" />
+    <ClInclude Include="ObParameterRange.h" />
+    <ClInclude Include="ObSeason.h" />
+    <ClInclude Include="ObSimulationSettings.h" />
+    <ClInclude Include="ObSpace.h" />
+    <ClInclude Include="ObTimeofDay.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObCustomProbabilityModel.cpp" />
+    <ClCompile Include="ObMarkovChainModel.cpp" />
+    <ClCompile Include="ObMoveMatrixModel.cpp" />
+    <ClCompile Include="ObMoveMatrixObject.cpp" />
+    <ClCompile Include="nlopt\api\deprecated.c" />
+    <ClCompile Include="nlopt\api\f77api.c" />
+    <ClCompile Include="nlopt\api\general.c" />
+    <ClCompile Include="nlopt\api\optimize.c" />
+    <ClCompile Include="nlopt\api\options.c" />
+    <ClCompile Include="nlopt\auglag\auglag.c" />
+    <ClCompile Include="nlopt\bobyqa\bobyqa.c" />
+    <ClCompile Include="nlopt\cdirect\cdirect.c" />
+    <ClCompile Include="nlopt\cdirect\hybrid.c" />
+    <ClCompile Include="nlopt\cobyla\cobyla.c" />
+    <ClCompile Include="nlopt\crs\crs.c" />
+    <ClCompile Include="nlopt\direct\DIRect.c" />
+    <ClCompile Include="nlopt\direct\direct_wrap.c" />
+    <ClCompile Include="nlopt\direct\DIRserial.c" />
+    <ClCompile Include="nlopt\direct\DIRsubrout.c" />
+    <ClCompile Include="nlopt\esch\esch.c" />
+    <ClCompile Include="nlopt\isres\isres.c" />
+    <ClCompile Include="nlopt\mlsl\mlsl.c" />
+    <ClCompile Include="nlopt\mma\ccsa_quadratic.c" />
+    <ClCompile Include="nlopt\mma\mma.c" />
+    <ClCompile Include="nlopt\neldermead\nldrmd.c" />
+    <ClCompile Include="nlopt\neldermead\sbplx.c" />
+    <ClCompile Include="nlopt\newuoa\newuoa.c" />
+    <ClCompile Include="nlopt\praxis\praxis.c" />
+    <ClCompile Include="nlopt\slsqp\slsqp.c" />
+    <ClCompile Include="nlopt\stogo\global.cc" />
+    <ClCompile Include="nlopt\stogo\linalg.cc" />
+    <ClCompile Include="nlopt\stogo\local.cc" />
+    <ClCompile Include="nlopt\stogo\stogo.cc" />
+    <ClCompile Include="nlopt\stogo\tools.cc" />
+    <ClCompile Include="nlopt\util\mt19937ar.c" />
+    <ClCompile Include="nlopt\util\qsort_r.c" />
+    <ClCompile Include="nlopt\util\redblack.c" />
+    <ClCompile Include="nlopt\util\rescale.c" />
+    <ClCompile Include="nlopt\util\sobolseq.c" />
+    <ClCompile Include="nlopt\util\stop.c" />
+    <ClCompile Include="nlopt\util\timer.c" />
+    <ClCompile Include="ObBehavior.cpp" />
+    <ClCompile Include="ObBuilding.cpp" />
+    <ClCompile Include="ObDayofWeek.cpp" />
+    <ClCompile Include="ObNormalDurationModel.cpp" />
+    <ClCompile Include="ObNormalProbabilityModel.cpp" />
+    <ClCompile Include="ObStatusTransitionEvent.cpp" />
+    <ClCompile Include="ObFmu.cpp" />
+    <ClCompile Include="ObMeetingEvent.cpp" />
+    <ClCompile Include="ObMovementBehavior.cpp" />
+    <ClCompile Include="ObRandomMovementEvent.cpp" />
+    <ClCompile Include="ObObject.cpp" />
+    <ClCompile Include="ObOccupant.cpp" />
+    <ClCompile Include="ObOccupantBehavior.cpp" />
+    <ClCompile Include="ObParameter.cpp" />
+    <ClCompile Include="ObParameterRange.cpp" />
+    <ClCompile Include="ObSeason.cpp" />
+    <ClCompile Include="ObSimulationSettings.cpp" />
+    <ClCompile Include="ObSpace.cpp" />
+    <ClCompile Include="ObTimeofDay.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3D90A47-A1AA-4725-86EB-8A9A02F7D6F1}</ProjectGuid>
+    <RootNamespace>obFMU</RootNamespace>
+    <ProjectName>obFMU</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)obFmu2.fmu\binaries\$(PlatformName)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+    <TargetName>$(ProjectName)2</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)obFmu2.fmu\binaries\win64\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)2</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\obFMU.fmu\binaries\win32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\obFMU.fmu\binaries\win32\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Movement\;.\;nlopt\;nlopt\stogo;nlopt\util;nlopt\direct;nlopt\cdirect;nlopt\praxis;nlopt\crs;nlopt\mlsl;nlopt\mma;nlopt\cobyla;nlopt\newuoa;nlopt\neldermead;nlopt\auglag;nlopt\bobyqa;nlopt\isres;nlopt\slsqp;nlopt\esch;nlopt\api;nlopt\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FMI_COSIMULATION;_DEBUG;_WIN32;_WIN;FMI_V2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Bscmake />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Movement\;.\;nlopt\;nlopt\stogo;nlopt\util;nlopt\direct;nlopt\cdirect;nlopt\praxis;nlopt\crs;nlopt\mlsl;nlopt\mma;nlopt\cobyla;nlopt\newuoa;nlopt\neldermead;nlopt\auglag;nlopt\bobyqa;nlopt\isres;nlopt\slsqp;nlopt\esch;nlopt\api;nlopt\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FMI_COSIMULATION;_DEBUG;_WIN;_WIN64;USE_WIN64_LIB;FMI_V2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Bscmake />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FMI_COSIMULATION</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>OccupMoveCalc;TiXML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FMI_COSIMULATION</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>OccupMoveCalc;TiXML;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

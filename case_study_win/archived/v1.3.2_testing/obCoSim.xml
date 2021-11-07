@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<CoSimulationParameters>
+  <SpaceNameMapping>
+    <obXML_SpaceID>ID_holder</obXML_SpaceID>
+    <FMU_InstanceName>place_holder</FMU_InstanceName>
+  </SpaceNameMapping>
+  <SimulationSettings>
+    <IsLeapYear>Yes</IsLeapYear>
+    <DayofWeekForStartDay>Tuesday</DayofWeekForStartDay>
+    <IsDebugMode>Yes</IsDebugMode>
+    <DoMovementCalculation>Yes</DoMovementCalculation>
+    <StartMonth>1</StartMonth>
+    <StartDay>1</StartDay>
+    <EndMonth>12</EndMonth>
+    <EndDay>31</EndDay>
+    <NumberofTimestepsPerHour>6</NumberofTimestepsPerHour>
+  </SimulationSettings>
+</CoSimulationParameters>

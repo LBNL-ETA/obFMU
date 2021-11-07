@@ -1,0 +1,1469 @@
+<?xml version="1.0"?>
+<OccupantBehavior xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="OS001" Version="1.3.2" xsi:noNamespaceSchemaLocation="obXML_v1.3.2.xsd">
+  <Buildings>
+    <Building ID="Building_1">
+      <Description>A office building which contains 37 spaces and 63 occupants.</Description>
+      <Type>Office</Type>
+      <Spaces ID="All_Spaces">
+        <Space ID="S0_Outdoor">
+          <Type>Outdoor</Type>
+        </Space>
+        <Space ID="S1_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S1_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S2_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S2_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S3_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S3_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S4_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S4_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S5_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S5_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S6_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S6_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S7_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S7_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S8_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S8_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S9_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S9_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S10_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S10_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S11_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S11_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S12_Office_-_Private_-_1p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S12_Office_-_Private_-_1p_O1</OccupantID>
+        </Space>
+        <Space ID="S13_Office_-_Open_-_4p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S13_Office_-_Open_-_4p_O1</OccupantID>
+          <OccupantID>S13_Office_-_Open_-_4p_O2</OccupantID>
+          <OccupantID>S13_Office_-_Open_-_4p_O3</OccupantID>
+          <OccupantID>S13_Office_-_Open_-_4p_O4</OccupantID>
+        </Space>
+        <Space ID="S14_Office_-_Open_-_4p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S14_Office_-_Open_-_4p_O1</OccupantID>
+          <OccupantID>S14_Office_-_Open_-_4p_O2</OccupantID>
+          <OccupantID>S14_Office_-_Open_-_4p_O3</OccupantID>
+          <OccupantID>S14_Office_-_Open_-_4p_O4</OccupantID>
+        </Space>
+        <Space ID="S15_Office_-_Open_-_4p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S15_Office_-_Open_-_4p_O1</OccupantID>
+          <OccupantID>S15_Office_-_Open_-_4p_O2</OccupantID>
+          <OccupantID>S15_Office_-_Open_-_4p_O3</OccupantID>
+          <OccupantID>S15_Office_-_Open_-_4p_O4</OccupantID>
+        </Space>
+        <Space ID="S16_Office_-_Open_-_4p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S16_Office_-_Open_-_4p_O1</OccupantID>
+          <OccupantID>S16_Office_-_Open_-_4p_O2</OccupantID>
+          <OccupantID>S16_Office_-_Open_-_4p_O3</OccupantID>
+          <OccupantID>S16_Office_-_Open_-_4p_O4</OccupantID>
+        </Space>
+        <Space ID="S17_Meeting_room_-_4p">
+          <Type>MeetingRoom</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>4</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>1</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>2</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.72</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.04</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S18_Meeting_room_-_4p">
+          <Type>MeetingRoom</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>4</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>1</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>2</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.72</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.04</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S19_Office_-_Empty">
+          <Type>OfficeShared</Type>
+        </Space>
+        <Space ID="S20_Meeting_room_-_13p">
+          <Type>MeetingRoom</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>13</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>1</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>2</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.72</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.12</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.04</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S21_Classroom_-_3p">
+          <Type>MeetingRoom</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>3</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>1</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>4</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.1</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.7</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.15</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.05</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S22_Classroom_-_5p">
+          <Type>MeetingRoom</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <MeetingEvent>
+            <SeasonType>All</SeasonType>
+            <DayofWeek>Weekdays</DayofWeek>
+            <MinNumOccupantsPerMeeting>2</MinNumOccupantsPerMeeting>
+            <MaxNumOccupantsPerMeeting>5</MaxNumOccupantsPerMeeting>
+            <MinNumberOfMeetingsPerDay>1</MinNumberOfMeetingsPerDay>
+            <MaxNumberOfMeetingsPerDay>4</MaxNumberOfMeetingsPerDay>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT30M</MeetingDuration>
+              <Probability>0.1</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT60M</MeetingDuration>
+              <Probability>0.7</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT90M</MeetingDuration>
+              <Probability>0.15</Probability>
+            </MeetingDurationProbability>
+            <MeetingDurationProbability>
+              <MeetingDuration>PT120M</MeetingDuration>
+              <Probability>0.05</Probability>
+            </MeetingDurationProbability>
+          </MeetingEvent>
+        </Space>
+        <Space ID="S23_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S23_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S23_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S24_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S24_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S24_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S25_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S25_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S25_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S26_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S26_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S26_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S27_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S27_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S27_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S28_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S28_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S28_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S29_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S29_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S29_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S30_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S30_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S30_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S31_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S31_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S31_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S32_Office_-_Private_-_2p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S32_Office_-_Private_-_2p_O1</OccupantID>
+          <OccupantID>S32_Office_-_Private_-_2p_O2</OccupantID>
+        </Space>
+        <Space ID="S33_Office_-_Private_-_3p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S33_Office_-_Private_-_3p_O1</OccupantID>
+          <OccupantID>S33_Office_-_Private_-_3p_O2</OccupantID>
+          <OccupantID>S33_Office_-_Private_-_3p_O3</OccupantID>
+        </Space>
+        <Space ID="S34_Office_-_Private_-_3p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S34_Office_-_Private_-_3p_O1</OccupantID>
+          <OccupantID>S34_Office_-_Private_-_3p_O2</OccupantID>
+          <OccupantID>S34_Office_-_Private_-_3p_O3</OccupantID>
+        </Space>
+        <Space ID="S35_Office_-_Private_-_3p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S35_Office_-_Private_-_3p_O1</OccupantID>
+          <OccupantID>S35_Office_-_Private_-_3p_O2</OccupantID>
+          <OccupantID>S35_Office_-_Private_-_3p_O3</OccupantID>
+        </Space>
+        <Space ID="S36_Office_-_Private_-_3p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S36_Office_-_Private_-_3p_O1</OccupantID>
+          <OccupantID>S36_Office_-_Private_-_3p_O2</OccupantID>
+          <OccupantID>S36_Office_-_Private_-_3p_O3</OccupantID>
+        </Space>
+        <Space ID="S37_Office_-_Private_-_3p">
+          <Type>OfficeShared</Type>
+		  <Systems>
+            <Light><Type>OnOff</Type></Light>
+			<Window><Type>Operable</Type></Window>
+          </Systems>
+          <OccupantID>S37_Office_-_Private_-_3p_O1</OccupantID>
+          <OccupantID>S37_Office_-_Private_-_3p_O2</OccupantID>
+          <OccupantID>S37_Office_-_Private_-_3p_O3</OccupantID>
+        </Space>
+      </Spaces>
+    </Building>
+  </Buildings>
+  <Occupants>
+    <Occupant ID="S1_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S2_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S3_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S4_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S5_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S6_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S7_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S8_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S9_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S10_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S11_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S12_Office_-_Private_-_1p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13_Office_-_Open_-_4p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13_Office_-_Open_-_4p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13_Office_-_Open_-_4p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S13_Office_-_Open_-_4p_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14_Office_-_Open_-_4p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14_Office_-_Open_-_4p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14_Office_-_Open_-_4p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S14_Office_-_Open_-_4p_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15_Office_-_Open_-_4p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15_Office_-_Open_-_4p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15_Office_-_Open_-_4p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S15_Office_-_Open_-_4p_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16_Office_-_Open_-_4p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16_Office_-_Open_-_4p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16_Office_-_Open_-_4p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S16_Office_-_Open_-_4p_O4">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S23_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S24_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S25_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S26_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S27_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S28_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S29_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S29_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S30_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S30_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S31_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S31_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S32_Office_-_Private_-_2p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S32_Office_-_Private_-_2p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S33_Office_-_Private_-_3p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S33_Office_-_Private_-_3p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S33_Office_-_Private_-_3p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S34_Office_-_Private_-_3p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S34_Office_-_Private_-_3p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S34_Office_-_Private_-_3p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S35_Office_-_Private_-_3p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S35_Office_-_Private_-_3p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S35_Office_-_Private_-_3p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S36_Office_-_Private_-_3p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S36_Office_-_Private_-_3p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S36_Office_-_Private_-_3p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S37_Office_-_Private_-_3p_O1">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S37_Office_-_Private_-_3p_O2">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+    <Occupant ID="S37_Office_-_Private_-_3p_O3">
+      <LifeStyle>Norm</LifeStyle>
+      <JobType>Regular staff</JobType>
+      <MovementBehaviorID>Staff</MovementBehaviorID>
+	  <BehaviorID>W1_Open</BehaviorID>
+	  <BehaviorID>W2_Open</BehaviorID>
+	  <BehaviorID>W3_Close</BehaviorID>
+	  <BehaviorID>W4_Close</BehaviorID>
+	  <BehaviorID>L1_Turnon_Arrival</BehaviorID>
+	  <BehaviorID>L2_TurnOff</BehaviorID>
+    </Occupant>
+  </Occupants>
+  <Behaviors>
+    <MovementBehavior ID="Staff">
+      <SeasonType>All</SeasonType>
+      <DayofWeek>Weekdays</DayofWeek>
+      <RandomMovementEvent>
+        <SpaceOccupancy>
+          <SpaceCategory>OwnOffice</SpaceCategory>
+          <PercentTimePresence>75.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>OtherOffice</SpaceCategory>
+          <PercentTimePresence>0.0</PercentTimePresence>
+          <Duration>PT00M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>MeetingRoom</SpaceCategory>
+          <PercentTimePresence>20.0</PercentTimePresence>
+          <Duration>PT60M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>AuxRoom</SpaceCategory>
+          <PercentTimePresence>0.0</PercentTimePresence>
+          <Duration>PT00M</Duration>
+        </SpaceOccupancy>
+        <SpaceOccupancy>
+          <SpaceCategory>Outdoor</SpaceCategory>
+          <PercentTimePresence>5.0</PercentTimePresence>
+          <Duration>PT30M</Duration>
+        </SpaceOccupancy>
+      </RandomMovementEvent>
+      <StatusTransitionEvent>
+        <EventType>Arrival</EventType>
+        <EventOccurModel>
+          <CustomProbabilityModel>
+            <StatusTransitionProbability> 
+              <Time>05:30:00</Time>
+              <Probability>0.0</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>06:30:00</Time>
+              <Probability>0.1</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>07:30:00</Time>
+              <Probability>0.2</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>08:30:00</Time>
+              <Probability>1.0</Probability>
+            </StatusTransitionProbability>
+         
+          </CustomProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>Departure</EventType>
+        <EventOccurModel>
+          <CustomProbabilityModel>
+            <StatusTransitionProbability> 
+              <Time>16:30:00</Time>
+              <Probability>0.0</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>17:30:00</Time>
+              <Probability>0.7</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>18:30:00</Time>
+              <Probability>0.9</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>21:30:00</Time>
+              <Probability>0.9</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>22:30:00</Time>
+              <Probability>0.95</Probability>
+            </StatusTransitionProbability>
+            <StatusTransitionProbability> 
+              <Time>23:30:00</Time>
+              <Probability>0.95</Probability>
+            </StatusTransitionProbability>   
+            <StatusTransitionProbability> 
+              <Time>24:00:00</Time>
+              <Probability>1.0</Probability>
+            </StatusTransitionProbability>          
+          </CustomProbabilityModel>
+        </EventOccurModel>
+      </StatusTransitionEvent>
+      <StatusTransitionEvent>
+        <EventType>ShortTermLeaving</EventType>
+        <EventOccurModel>
+          <NormalProbabilityModel>
+            <EarlyOccurTime>12:00:00</EarlyOccurTime>
+            <TypicalOccurTime>12:15:00</TypicalOccurTime>
+          </NormalProbabilityModel>
+        </EventOccurModel>
+        <EventDuration>
+          <NormalDurationModel>
+            <TypicalDuration>PT60M</TypicalDuration>
+            <MinimumDuration>PT45M</MinimumDuration>
+          </NormalDurationModel>
+        </EventDuration>
+      </StatusTransitionEvent>
+    </MovementBehavior>
+	<Behavior ID="W1_Open" AppliedBuildingType="Office" BuildingTypeComment="5_private_office_rooms_and_1_twp-person_room" SystemType="Windows" ActionType="TurnOn" PaperAuthors="Yun, Geun Young; Steemers, Koen" PaperYear="2008" PaperTitle="Time-dependent occupant behaviour models of window control in summer" PaperDOI="10.1016/j.buildenv.2007.08.001"  DataCollectionRegion="UK" SampleSize="06/13/2006_until_09/15/2006">
+		<Description>Window Opening at Arrival</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+			<Environment>
+				<Parameter ID="YunIndoorTemp1">
+					<Type>RoomAirTemperature</Type>
+				</Parameter>
+			</Environment>
+			<EventType>EnteringRoom</EventType>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOn</Type>
+				<Formula>
+					<Logit1D>
+						<Description>S Shaped Curve Probability Function</Description>
+						<CoefficientA>0.218</CoefficientA>
+						<CoefficientB>-4.849</CoefficientB>
+						<Parameter1ID>YunIndoorTemp1</Parameter1ID>
+					</Logit1D>
+				</Formula>
+			</Interaction>
+		</Actions>
+		<Systems>
+			<Windows>
+				<WindowType>Operable</WindowType>
+			</Windows>
+		</Systems>
+	</Behavior>
+		
+	<Behavior ID="W2_Open" AppliedBuildingType="Office" BuildingTypeComment="5_private_office_rooms_and_1_twp-person_room" SystemType="Windows" ActionType="TurnOn" PaperAuthors="Yun, Geun Young; Steemers, Koen" PaperYear="2008" PaperTitle="Time-dependent occupant behaviour models of window control in summer" PaperDOI="10.1016/j.buildenv.2007.08.001"  DataCollectionRegion="UK" SampleSize="06/13/2006_until_09/15/2006">
+		<Description>Window Opening, Intermediate</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+			<Environment>
+				<Parameter ID="YunIndoorTemp2">
+					<Type>RoomAirTemperature</Type>
+				</Parameter>
+			</Environment>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOn</Type>
+				<Formula>
+					<Logit1D>
+						<Description>S Shaped Curve Probability Function</Description>
+						<CoefficientA>0.030</CoefficientA>
+						<CoefficientB>-0.629</CoefficientB>
+						<Parameter1ID>YunIndoorTemp2</Parameter1ID>
+					</Logit1D>
+				</Formula>
+			</Interaction>
+		</Actions>
+		<Systems>
+			<Windows>
+				<WindowType>Operable</WindowType>
+			</Windows>
+		</Systems>
+	</Behavior>
+		
+	<Behavior ID="W3_Close" AppliedBuildingType="Office" BuildingTypeComment="5_private_office_rooms_and_1_twp-person_room" SystemType="Windows" ActionType="TurnOff" PaperAuthors="Yun, Geun Young; Steemers, Koen" PaperYear="2008" PaperTitle="Time-dependent occupant behaviour models of window control in summer" PaperDOI="10.1016/j.buildenv.2007.08.001"  DataCollectionRegion="UK" SampleSize="06/13/2006_until_09/15/2006">
+		<Description>Window Closing, Intermediate</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+			<Environment>
+				<Parameter ID="YunIndoorTemp3">
+					<Type>RoomAirTemperature</Type>
+				</Parameter>
+			</Environment>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOff</Type>
+				<Formula>
+					<Logit1D>
+						<Description>S Shaped Curve Probability Function</Description>
+						<CoefficientA>-0.007</CoefficientA>
+						<CoefficientB>0.209</CoefficientB>
+						<Parameter1ID>YunIndoorTemp3</Parameter1ID>
+					</Logit1D>
+				</Formula>
+		</Interaction>
+		</Actions>
+		<Systems>
+			<Windows>
+				<WindowType>Operable</WindowType>
+			</Windows>
+		</Systems>
+	</Behavior>
+		
+	<Behavior ID="W4_Close" AppliedBuildingType="Office" BuildingTypeComment="5_private_office_rooms_and_1_twp-person_room" SystemType="Windows" ActionType="TurnOff" PaperAuthors="Yun, Geun Young; Steemers, Koen" PaperYear="2008" PaperTitle="Time-dependent occupant behaviour models of window control in summer" PaperDOI="10.1016/j.buildenv.2007.08.001"  DataCollectionRegion="UK" SampleSize="06/13/2006_until_09/15/2006">
+		<Description>Window Closing, Departure</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+		<EventType>LeavingRoomMoreThan6Hours</EventType>
+			<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOff</Type>
+				<Formula>
+					<ConstantValue>
+						<Description>constant probability</Description>
+						<CoefficientA>1.0</CoefficientA>
+					</ConstantValue>
+				</Formula>
+			</Interaction>
+		</Actions>
+		<Systems>
+			<Windows>
+				<WindowType>Operable</WindowType>
+			</Windows>
+		</Systems>
+		<IsSpecialBehavior>true</IsSpecialBehavior>
+	</Behavior>
+	<Behavior ID="L1_Turnon_Arrival" AppliedBuildingType="Office" BuildingTypeComment="Private_Office_Room" SystemType="Lights" ActionType="TurnOn" PaperAuthors="Newsham, G. R." PaperYear="1994" PaperTitle="Manual Control of Window Blinds and Electric Lighting">
+		<Description>Behavior model developed from assumptions</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+			<EventType>EnteringRoom</EventType>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOn</Type>
+				<Formula>
+					<ConstantValue>
+						<Description>constant probability</Description>
+						<CoefficientA>1.0</CoefficientA>
+					</ConstantValue>
+				</Formula>
+			</Interaction>
+		</Actions>
+		<Systems>
+			<Lights>
+				<LightType>OnOff</LightType>
+			</Lights>
+		</Systems>
+	</Behavior>
+		
+	<Behavior ID="L2_TurnOff" AppliedBuildingType="Office" BuildingTypeComment="Private_Office_Room" SystemType="Lights" ActionType="TurnOff" PaperAuthors="Newsham, G. R." PaperYear="1994" PaperTitle="Manual Control of Window Blinds and Electric Lighting">
+		<Description>Behavior model developed from assumptions</Description>
+		<Drivers>
+			<Time>
+				<TimeofDay>All</TimeofDay>
+				<SeasonType>All</SeasonType>
+			</Time>
+			<EventType>LeavingRoom</EventType>
+			<OtherConstraint>NoOccupantsInRoom</OtherConstraint>
+		</Drivers>
+		<Actions>
+			<Interaction>
+				<Type>TurnOff</Type>
+				<Formula>
+					<ConstantValue>
+						<Description>constant probability</Description>
+						<CoefficientA>1.0</CoefficientA>
+					</ConstantValue>
+				</Formula>
+			</Interaction>
+		</Actions>
+		<Systems>
+			<Lights>
+				<LightType>OnOff</LightType>
+			</Lights>
+		</Systems>
+	</Behavior>
+  </Behaviors>
+  <Holidays>
+    <Holiday>
+      <Date>2016-01-01</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-01-18</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-02-15</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-05-30</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-07-04</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-09-05</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-10-10</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-11-11</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-11-24</Date>
+    </Holiday>
+    <Holiday>
+      <Date>2016-12-25</Date>
+    </Holiday>
+  </Holidays>
+</OccupantBehavior>

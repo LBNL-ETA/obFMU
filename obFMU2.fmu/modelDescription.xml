@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- GUID generated at http://guid.us -->
+<fmiModelDescription
+  fmiVersion="2.0"
+  modelName="obFMU2"
+  guid="{fed5964c-e9f4-4d18-8c6f-fdf3fd96d4bf}"
+  description="obFMU with FMI v2"
+  author="Yixing Chen, Tianzhen Hong"
+  version="2.0"
+  copyright="Lawrence Berkeley National Laboratory, USA"
+  license="Public Domain"
+  generationTool="C++ compiler"
+  generationDateAndTime="2018-03-13T14:00:00"
+  variableNamingConvention="flat" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="fmi2ModelDescription.xsd">
+  <CoSimulation 
+    modelIdentifier="obFMU2"
+	canGetAndSetFMUstate="true" >
+  </CoSimulation>
+<ModelVariables>
+  <ScalarVariable
+     name="Zone_Temperature"
+     valueReference="201"
+     description="Zone air temprautre in degree C"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+  
+  <ScalarVariable
+     name="Zone_illum"
+     valueReference="202"
+     description="Zone daylighting illumination in lux"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+  
+  <ScalarVariable
+     name="Zone_co2"
+     valueReference="203"
+     description="Zone co2 concentration in ppm"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+
+  <ScalarVariable
+     name="Zone_Light_Power"
+     valueReference="204"
+     description="Zone lighting power in W"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+	
+  <ScalarVariable
+     name="OutdoorAir_Drybulb_Temperature"
+     valueReference="205"
+     description="ourdoor air dry-bulb temperature in degree C"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+	
+  <ScalarVariable
+     name="Outdoor_Rain_Indicator"
+     valueReference="206"
+     description="Outdoor rain indicator in 1 or 0"
+     causality="input">
+     <Real/>
+  </ScalarVariable>
+
+  <ScalarVariable
+     name="Zone_HVAC_SCH"
+     valueReference="101"
+     description="Zone HVAC schedule in 1 or 0"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+
+    <ScalarVariable
+     name="Zone_light_SCH"
+     valueReference="102"
+     description="Zone lighting schedule between 0.0 and 1.0"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+
+    <ScalarVariable
+     name="Zone_infil_SCH"
+     valueReference="103"
+     description="Zone infiltration schedule between 0.0 and 1.0"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+	
+   <ScalarVariable
+     name="Zone_PlugLoad_SCH"
+     valueReference="104"
+     description="Zone plug load schedule between 0.0 and 1.0"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+	
+   <ScalarVariable
+     name="Zone_Thermostat_SCH"
+     valueReference="105"
+     description="Zone zone thermostate set point in degree C"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+	
+   <ScalarVariable
+     name="Zone_ShadeAndBlind_SCH"
+     valueReference="106"
+     description="Zone shade and blind schedule in 0 or 1"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+
+    <ScalarVariable
+     name="Zone_occ_SCH"
+     valueReference="107"
+     description="Zone occupant schedule between 0 and 1"
+     causality="output">
+     <Real/>
+  </ScalarVariable>
+</ModelVariables>
+<ModelStructure>
+</ModelStructure>
+</fmiModelDescription>
+
+
+
+
+

@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="nplot">
+      <UniqueIdentifier>{0012da05-aeed-49b1-b89d-189f7d3ff1cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nplot\Header Files">
+      <UniqueIdentifier>{c895ffce-7612-400f-a0c3-d2f7db4e7d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nplot\Source Files">
+      <UniqueIdentifier>{a96e2036-ddfc-49ca-ba99-6573a2c442d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fmiFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmiPlatformTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObBuilding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObDayofWeek.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObOccupant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObOccupantBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObParameterRange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObSeason.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObSimulationSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObSpace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObTimeofDay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\auglag\auglag.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\bobyqa\bobyqa.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\cdirect\cdirect.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\cobyla\cobyla.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\direct\direct-internal.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\direct\direct.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\esch\esch.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\f77funcs.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\f77funcs_.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\global.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\linalg.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\local.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\mlsl\mlsl.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\mma\mma.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\neldermead\neldermead.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\newuoa\newuoa.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\crs\crs.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\isres\isres.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\nlopt.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\nlopt-internal.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\nlopt-in.hpp">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\util\nlopt-util.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\api\nlopt.hpp">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\praxis\praxis.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\util\redblack.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\slsqp\slsqp.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\util\soboldata.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\stogo.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\stogo_config.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\stogo\tools.h">
+      <Filter>nplot\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nlopt\build\config.h">
+      <Filter>nplot</Filter>
+    </ClInclude>
+    <ClInclude Include="ObMovementBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObMeetingEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObMoveMatrixModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObMoveMatrixObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObRandomMovementEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObStatusTransitionEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObEventOccurModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObEventOccurModelFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObCustomProbabilityModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObNormalProbabilityModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObMarkovChainModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObDurationModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObNormalDurationModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObFmu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmi2TypesPlatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmi2FunctionTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmi2Functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ObBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObBuilding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObDayofWeek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObFmu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObOccupant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObOccupantBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObParameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObParameterRange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObSeason.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObSimulationSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObSpace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObTimeofDay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\auglag\auglag.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\bobyqa\bobyqa.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\mma\ccsa_quadratic.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\cdirect\cdirect.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\cobyla\cobyla.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\crs\crs.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\api\deprecated.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\direct\DIRect.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\direct\direct_wrap.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\direct\DIRserial.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\direct\DIRsubrout.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\esch\esch.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\api\options.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\api\optimize.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\api\general.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\api\f77api.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\stogo\global.cc">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\cdirect\hybrid.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\isres\isres.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\stogo\linalg.cc">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\stogo\local.cc">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\mlsl\mlsl.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\mma\mma.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\mt19937ar.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\newuoa\newuoa.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\neldermead\nldrmd.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\praxis\praxis.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\qsort_r.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\redblack.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\rescale.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\neldermead\sbplx.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\slsqp\slsqp.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\sobolseq.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\stogo\stogo.cc">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\stop.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\util\timer.c">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nlopt\stogo\tools.cc">
+      <Filter>nplot\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObMovementBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObMeetingEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObMoveMatrixModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObMoveMatrixObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObRandomMovementEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObStatusTransitionEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObCustomProbabilityModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObNormalProbabilityModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObMarkovChainModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObNormalDurationModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

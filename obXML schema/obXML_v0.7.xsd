@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 (x64) (http://www.altova.com) by TIANZHEN HONG (LAWRENCE BERKELEY NATIONAL LAB) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="OccupantBehavior">
+		<xs:complexType>
+			<xs:choice minOccurs="3" maxOccurs="5">
+				<xs:element name="Buildings">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="Building">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										<xs:element name="Type" type="BuildingType"/>
+										<xs:element name="Address" type="xs:string" minOccurs="0"/>
+										<xs:element name="Description" type="xs:string" minOccurs="0"/>
+										<xs:element name="Spaces" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element name="Space" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded">
+																<xs:element name="Type" type="SpaceType"/>
+																<xs:element name="GroupPriority" type="GroupPriority"/>
+																<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																<xs:element name="MaxNumOccupants" type="xs:integer" minOccurs="0"/>
+																<xs:element name="MinNumOccupants" type="xs:integer" minOccurs="0"/>
+																<xs:element name="Meetings" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="Meeting" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:all>
+																						<xs:element name="Duration" type="xs:decimal"/>
+																						<xs:element name="StartTime" type="xs:time"/>
+																						<xs:element name="EndTime" type="xs:time"/>
+																						<xs:element name="Probability" type="xs:decimal"/>
+																					</xs:all>
+																					<xs:attribute name="ID" type="xs:ID" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Systems" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="Window" minOccurs="0">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element name="Type" type="WindowType"/>
+																						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Light" minOccurs="0">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element name="Type" type="LightType"/>
+																						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="HVAC" minOccurs="0">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element name="Type" type="HVACType"/>
+																						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="OccupantID" type="xs:IDREF" maxOccurs="unbounded"/>
+															</xs:choice>
+															<xs:attribute name="ID" type="xs:ID" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="ID" type="xs:ID" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Occupants">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="Occupant" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:choice maxOccurs="unbounded">
+										<xs:element name="Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="Age" type="xs:integer" minOccurs="0"/>
+										<xs:element name="Gender" type="GenderType" minOccurs="0"/>
+										<xs:element name="LifeStyle" type="LifeStyleType" minOccurs="0"/>
+										<xs:element name="JobType" type="JobType" minOccurs="0"/>
+										<xs:element name="BehaviorID" type="xs:IDREF" maxOccurs="unbounded"/>
+									</xs:choice>
+									<xs:attribute name="ID" type="xs:ID" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Behaviors">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="Behavior" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:choice maxOccurs="5">
+										<xs:element name="Description" type="xs:string" minOccurs="0"/>
+										<xs:element name="Drivers" minOccurs="0">
+											<xs:complexType>
+												<xs:choice maxOccurs="unbounded">
+													<xs:element name="Time" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded">
+																<xs:element name="TimeofDay" type="TimeofDayType" minOccurs="0" maxOccurs="7"/>
+																<xs:element name="DayofWeek" type="DayofWeekType" minOccurs="0" maxOccurs="11"/>
+																<xs:element name="SeasonType" type="SeasonType" minOccurs="0" maxOccurs="5"/>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Environment" minOccurs="0">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded">
+																<xs:element name="Parameter" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+																			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																			<xs:element name="Type" type="ParameterType"/>
+																		</xs:choice>
+																		<xs:attribute name="ID" type="xs:ID" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="EventType" type="RoomEventType" minOccurs="0" maxOccurs="unbounded"/>
+													<xs:element name="OtherConstraint" type="OtherConstraintType" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Needs" minOccurs="0">
+											<xs:complexType>
+												<xs:choice maxOccurs="2">
+													<xs:element name="Physical" minOccurs="0">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded">
+																<xs:element name="Thermal" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="OtherComfortEnvelope" minOccurs="0">
+																				<xs:complexType>
+																					<xs:choice maxOccurs="unbounded">
+																						<xs:element name="ParameterRange" type="ParameterRange" maxOccurs="unbounded"/>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Visual" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="ParameterRange" type="ParameterRange" maxOccurs="unbounded"/>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="IAQ" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="ParameterRange" type="ParameterRange" maxOccurs="unbounded"/>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Actions">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="Interaction" minOccurs="0">
+														<xs:complexType>
+															<xs:all>
+																<xs:element name="Type" type="InteractionType"/>
+																<xs:element name="Formula">
+																	<xs:complexType>
+																		<xs:choice>
+																			<xs:element name="ConstantValue" type="eqConstantValueType" minOccurs="0"/>
+																			<xs:element name="Linear1D" type="eqLinear1DType" minOccurs="0"/>
+																			<xs:element name="Linear2D" type="eqLinear2DType" minOccurs="0"/>
+																			<xs:element name="Linear3D" type="eqLinear3DType" minOccurs="0"/>
+																			<xs:element name="Quadratic1D" type="eqQuadratic1DType" minOccurs="0"/>
+																			<xs:element name="Logit1D" type="eqLogit1DLinearType" minOccurs="0"/>
+																			<xs:element name="Logit2D" type="eqLogit2DLinearType" minOccurs="0"/>
+																			<xs:element name="Logit3D" type="eqLogit3DLinearType" minOccurs="0"/>
+																			<xs:element name="Weibull1D" type="eqWeibull1D3P" minOccurs="0"/>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+															</xs:all>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Movement" minOccurs="0">
+														<xs:complexType>
+															<xs:choice maxOccurs="unbounded">
+																<xs:element name="MarkovChainModel">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="SpaceOccupancy" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:all>
+																						<xs:element name="SpaceCategory" type="SpaceCategory"/>
+																						<xs:element name="PercentTimePresence">
+																							<xs:simpleType>
+																								<xs:restriction base="xs:decimal">
+																									<xs:minInclusive value="0"/>
+																									<xs:maxInclusive value="1"/>
+																								</xs:restriction>
+																							</xs:simpleType>
+																						</xs:element>
+																						<xs:element name="AveragePresenceDuration">
+																							<xs:complexType>
+																								<xs:simpleContent>
+																									<xs:extension base="xs:decimal">
+																										<xs:attribute name="Unit" type="TimeUnit" default="Minute"/>
+																									</xs:extension>
+																								</xs:simpleContent>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:all>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Events">
+																	<xs:complexType>
+																		<xs:choice maxOccurs="unbounded">
+																			<xs:element name="Event">
+																				<xs:complexType>
+																					<xs:all>
+																						<xs:element name="Type" type="MovementEventType"/>
+																						<xs:element name="ProbabilityModel" type="ProbabilityModelType" default="UniformDistribution"/>
+																						<xs:element name="StartTime" type="xs:time"/>
+																						<xs:element name="EndTime" type="xs:time"/>
+																						<xs:element name="TypicalTime" type="xs:time" minOccurs="0"/>
+																					</xs:all>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="MeetingFrequency" default="1"/>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Systems" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="Windows" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="WindowType" type="WindowType"/>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Lights" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="LightType" type="LightType"/>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="HVAC" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="HVACType" type="HVACType"/>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="ID" type="xs:ID" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Seasons" minOccurs="0">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="Season" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="StartMonth" type="xs:integer"/>
+										<xs:element name="StartDay" type="xs:integer"/>
+										<xs:element name="EndMonth" type="xs:integer"/>
+										<xs:element name="EndDay" type="xs:integer"/>
+									</xs:all>
+									<xs:attribute name="Type" type="SeasonType" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TimeofDays" minOccurs="0">
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="TimeofDay" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="StartHour" type="xs:integer"/>
+										<xs:element name="StartMinute" type="xs:integer"/>
+										<xs:element name="EndHour" type="xs:integer"/>
+										<xs:element name="EndMinute" type="xs:integer"/>
+									</xs:all>
+									<xs:attribute name="Type" type="TimeofDayType" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:attribute name="ID" use="required"/>
+			<xs:attribute name="Version" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="eqConstantValueType">
+		<xs:all>
+			<xs:element name="Description" type="xs:string" default="p=A" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLinear1DType">
+		<xs:all>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="Parameter1ID"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLinear2DType">
+		<xs:all>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+			<xs:element name="Parameter2ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLinear3DType">
+		<xs:all>
+			<xs:element name="Description" type="xs:string" default="p=A*P1+B*P2+C*P3+D" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="CoefficientD" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+			<xs:element name="Parameter2ID" type="xs:IDREF"/>
+			<xs:element name="Parameter3ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqQuadratic1DType">
+		<xs:all>
+			<xs:element name="Description" default="p=A*P1*P1+B*P1+C" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLogit1DLinearType">
+		<xs:all>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLogit2DLinearType">
+		<xs:all>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+			<xs:element name="Parameter2ID"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqLogit3DLinearType">
+		<xs:all>
+			<xs:element name="Description" default="log(p/(1-p)) = A*P1+B*P2+C*P3+D" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="CoefficientD" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+			<xs:element name="Parameter2ID" type="xs:IDREF"/>
+			<xs:element name="Parameter3ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="eqWeibull1D3P">
+		<xs:all>
+			<xs:element name="Description" type="xs:string" default="p=1-exp( - dT * ( (P1-A)/B)^C)) if (P1-A)/B is large than 0; p=0 if (P1-A)/B is less or equals to 0" minOccurs="0"/>
+			<xs:element name="CoefficientA" type="xs:decimal"/>
+			<xs:element name="CoefficientB" type="xs:decimal"/>
+			<xs:element name="CoefficientC" type="xs:decimal"/>
+			<xs:element name="Parameter1ID" type="xs:IDREF"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ParameterRange">
+		<xs:choice minOccurs="2" maxOccurs="3">
+			<xs:element name="ParameterID"/>
+			<xs:element name="Min" minOccurs="0"/>
+			<xs:element name="Max" minOccurs="0"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:simpleType name="InteractionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TurnOn"/>
+			<xs:enumeration value="TurnOff"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeofDayType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Morning"/>
+			<xs:enumeration value="Noon"/>
+			<xs:enumeration value="Afternoon"/>
+			<xs:enumeration value="Evening"/>
+			<xs:enumeration value="Day"/>
+			<xs:enumeration value="Night"/>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DayofWeekType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
+			<xs:enumeration value="Saturday"/>
+			<xs:enumeration value="Sunday"/>
+			<xs:enumeration value="Weekday"/>
+			<xs:enumeration value="Weekend"/>
+			<xs:enumeration value="Holiday"/>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SeasonType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Spring"/>
+			<xs:enumeration value="Summer"/>
+			<xs:enumeration value="Fall"/>
+			<xs:enumeration value="Winter"/>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WindowType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Operable"/>
+			<xs:enumeration value="Fixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LightType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OnOff"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HVACType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ZoneOnOff"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MeetingRoom"/>
+			<xs:enumeration value="Corridor"/>
+			<xs:enumeration value="Outdoor"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="ResidentialOwn"/>
+			<xs:enumeration value="ResidentialRent"/>
+			<xs:enumeration value="OfficeShared"/>
+			<xs:enumeration value="OfficePrivate"/>
+			<xs:enumeration value="Other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SpaceCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OwnOffice"/>
+			<xs:enumeration value="OtherOffice"/>
+			<xs:enumeration value="MeetingRoom"/>
+			<xs:enumeration value="AuxRoom"/>
+			<xs:enumeration value="Outdoor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BuildingType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AutomotiveFacility"/>
+			<xs:enumeration value="ConventionCenter"/>
+			<xs:enumeration value="DataCenter"/>
+			<xs:enumeration value="Courthouse"/>
+			<xs:enumeration value="DiningBarLoungeOrLeisure"/>
+			<xs:enumeration value="DiningCafeteriaFastFood"/>
+			<xs:enumeration value="DiningFamily"/>
+			<xs:enumeration value="Dormitory"/>
+			<xs:enumeration value="ExerciseCenter"/>
+			<xs:enumeration value="Firestation"/>
+			<xs:enumeration value="Gymnasium"/>
+			<xs:enumeration value="HospitalOrHealthcare"/>
+			<xs:enumeration value="Hotel"/>
+			<xs:enumeration value="Library"/>
+			<xs:enumeration value="Manufacturing"/>
+			<xs:enumeration value="Motel"/>
+			<xs:enumeration value="MotionPictureTheatre"/>
+			<xs:enumeration value="MultiFamily"/>
+			<xs:enumeration value="Museum"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="ParkingGarage"/>
+			<xs:enumeration value="Penitentiary"/>
+			<xs:enumeration value="PerformingArtsTheater"/>
+			<xs:enumeration value="PoliceStation"/>
+			<xs:enumeration value="PostOffice"/>
+			<xs:enumeration value="ReligiousBuilding"/>
+			<xs:enumeration value="Retail"/>
+			<xs:enumeration value="SchoolOrUniversity"/>
+			<xs:enumeration value="SingleFamilyHome"/>
+			<xs:enumeration value="ResidentialOwn"/>
+			<xs:enumeration value="ResidentialRent"/>
+			<xs:enumeration value="Retail"/>
+			<xs:enumeration value="Office"/>
+			<xs:enumeration value="SportsArea"/>
+			<xs:enumeration value="TownHall"/>
+			<xs:enumeration value="Transportation"/>
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="Warehouse"/>
+			<xs:enumeration value="Workshop"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GenderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Male"/>
+			<xs:enumeration value="Female"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LifeStyleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Austerity"/>
+			<xs:enumeration value="Luxury"/>
+			<xs:enumeration value="Norm"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ParameterType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RoomAirTemperature"/>
+			<xs:enumeration value="RoomCO2Concentration"/>
+			<xs:enumeration value="RoomWorkPlaneDaylightIlluminance"/>
+			<xs:enumeration value="RoomLightsPowerDensity"/>
+			<xs:enumeration value="OutdoorDryBulbTemperature"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="JobType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Sales"/>
+			<xs:enumeration value="Researcher"/>
+			<xs:enumeration value="Administrator"/>
+			<xs:enumeration value="Manager"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RoomEventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LevaingRoom"/>
+			<xs:enumeration value="EnteringRoom"/>
+			<xs:enumeration value="StayingInRoom"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MovementEventType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Arrive"/>
+			<xs:enumeration value="Leave"/>
+			<xs:enumeration value="LeaveAndReturn"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeUnit">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Day"/>
+			<xs:enumeration value="Hour"/>
+			<xs:enumeration value="Minute"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ProbabilityModelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UniformDistribution"/>
+			<xs:enumeration value="NormalDistribution"/>
+			<xs:enumeration value="LogNormalDistribution"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OtherConstraintType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NoOccupantsInRoom"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GroupPriority">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Majority"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
